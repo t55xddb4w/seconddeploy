@@ -1,0 +1,43 @@
+{
+      "name": "Selenium Testing",
+      "description": "Selenium Test",
+      "keywords": [
+         "selenium",
+      ],   
+   "repository": "https://github.com/t55xddb4w/seconddeploy",
+   "env": {
+      "WEB_URL": {
+         "description": "The URL OF WEBSITE",
+         "required": true,
+         "value": "https://index.strongerdc.ml"
+      },
+      "GECKODRIVER_PATH": {
+         "description": "GECKODRIVER_PATH",
+         "required": true,
+         "value": "app/vendor/geckodriver/geckodriver"
+      },
+      "FIREFOX_BIN": {
+         "description": "FIREFOX_BIN",
+         "required": true,
+         "value": "/app/vendor/firefox/firefox"
+      },    
+      "LD_LIBRARY_PATH": {
+         "description": "LD_LIBRARY_PATH",
+         "required": true,
+         "value": "/usr/local/lib:/usr/lib:/lib:/app/vendor"
+      },      
+      "PATH": {
+         "description": "PATH",
+         "required": true,
+         "value": "/usr/local/bin:/usr/bin:/bin:/app/vendor/"
+      }
+   },
+  "buildpacks": [
+		{
+			"url": "https://github.com/pyronlaboratory/heroku-integrated-firefox-geckodriver"
+		},
+    {
+			"url": "heroku/python"
+		}
+	]
+}
