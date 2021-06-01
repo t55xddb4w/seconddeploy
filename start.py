@@ -1,7 +1,10 @@
 import time
+import os
 
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+
+weburl = os.getenv('WEB_URL')
 
 check=1
 while(check>0):
@@ -12,7 +15,7 @@ while(check>0):
         chrome_options=gChromeOptions, executable_path=ChromeDriverManager().install()
     )
     
-    gDriver.get("https://index.strongerdc.ml")
+    gDriver.get(weburl)
     time.sleep(600)
     gDriver.close()
     print("Times Run = ", check)
