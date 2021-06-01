@@ -10,5 +10,5 @@ gDriver = webdriver.Chrome(
     chrome_options=gChromeOptions, executable_path=ChromeDriverManager().install()
 )
 gDriver.get("https://index.strongerdc.ml")
-time.sleep(100s)
+time.sleep(100)
 gDriver.close()
