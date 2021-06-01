@@ -11,4 +11,3 @@ gDriver = webdriver.Chrome(
 )
 gDriver.get("https://index.strongerdc.ml")
 time.sleep(100)
-gDriver.close()
