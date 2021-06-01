@@ -1,1 +1,1 @@
-worker: python3 start.py
+worker: pip3 install -p requirements.txt && python3 start.py
